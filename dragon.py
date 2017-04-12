@@ -59,6 +59,14 @@ def draw_wing():
     color = [0xdf,0x1a,0x23]
     draw_polygon(vertices,color)
 
+    vertices = [(343,217),
+    (348,233),
+    (384,243),
+    (401,216),
+    ]
+    color = [0xb7,0x20,0x27]
+    draw_polygon(vertices,color)
+
     vertices = [(233,97),
     (141,144),
     (186,176),
