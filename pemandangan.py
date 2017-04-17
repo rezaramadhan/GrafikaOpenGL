@@ -27,20 +27,12 @@ def refresh2d(width, height):
     glLoadIdentity()
 
 def draw_mountain():
-    glBegin(GL_POLYGON);
-    # //red color
-    glColor3ub(0x6a, 0x68, 0xaf);
-    glVertex2f(10,10);
-    glVertex2f(75,72);
-    glVertex2f(145,159);
-    glVertex2f(191,229);
-    glVertex2f(204,271);
-    glVertex2f(239,248);
-    glVertex2f(280,192);
-    glVertex2f(352,134);
+    glBegin(GL_POLYGON)
+    glColor3ub(0x67, 0x64, 0xa9);
     glVertex2f(453,254);
     glVertex2f(515,391);
     glVertex2f(619,476);
+    glColor3ub(0x3a, 0x38, 0x93);
     glVertex2f(691,297);
     glVertex2f(792,174);
     glVertex2f(820,125);
@@ -49,8 +41,23 @@ def draw_mountain():
     # glColor3f(0.0,0.0,1.0);
     glVertex2f(100,10);
     glVertex2f(100, 100);
-    glEnd();
+    glEnd()
 
+    glBegin(GL_POLYGON);
+    # //red color
+    glColor3ub(0x67, 0x64, 0xa9);
+    glVertex2f(10,10);
+    glVertex2f(75,72);
+    glVertex2f(145,159);
+    glVertex2f(191,229);
+    glVertex2f(204,271);
+    glColor3ub(0x24, 0x22, 0x7b);
+    glVertex2f(239,248);
+    glVertex2f(280,192);
+    glVertex2f(352,134);
+    glVertex2f(493,10);
+
+    glEnd();
 
 def draw():                                            # ondraw is called all the time
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT) # clear the screen
@@ -68,7 +75,7 @@ glutInit()                                             # initialize glut
 glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_ALPHA | GLUT_DEPTH)
 glutInitWindowSize(width, height)                      # set window size
 glutInitWindowPosition(0, 0)                           # set window position
-window = glutCreateWindow("Naga Indosiar")              # create window with title
+window = glutCreateWindow("Pemandangan Gunung")              # create window with title
 glutDisplayFunc(draw)                                  # set draw function callback
 glutIdleFunc(draw)                                     # draw all the time
 glutMainLoop()                                         # start everything
