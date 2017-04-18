@@ -357,61 +357,68 @@ def draw_sun():
 	triangleAmount = 100
 	
 	glBegin(GL_POLYGON)
-	glColor3ub(249, 240, 69);
+	glColor3f(1, 1, 0.6);
 	glVertex2f(150, 550)
 	glVertex2f(175, 542)
+	glColor3ub(249, 240, 69);
 	glVertex2f(163, 575)
 	glEnd()
 	
 	glBegin(GL_POLYGON)
-	glColor3ub(249, 240, 69);
+	glColor3f(1, 1, 0.6);
 	glVertex2f(175, 542)
 	glVertex2f(200, 500)
+	glColor3ub(249, 240, 69);
 	glVertex2f(225, 545)
 	glEnd()
 	
 	glBegin(GL_POLYGON)
-	glColor3ub(249, 240, 69);
+	glColor3f(1, 1, 0.6);
 	glVertex2f(150, 550)
 	glVertex2f(125, 540)
+	glColor3ub(249, 240, 69);
 	glVertex2f(115, 575)
 	glEnd()
 	
 	glBegin(GL_POLYGON)
-	glColor3ub(249, 240, 69);
+	glColor3f(1, 1, 0.6);
 	glVertex2f(125, 542)
 	glVertex2f(100, 500)
+	glColor3ub(249, 240, 69);
 	glVertex2f(75, 545)
 	glEnd()
 	
 	glBegin(GL_POLYGON)
-	glColor3ub(249, 240, 69);
+	glColor3f(1, 1, 0.6);
 	glVertex2f(100, 500)
 	glVertex2f(115, 464)
+	glColor3ub(249, 240, 69);
 	glVertex2f(75, 482)
 	glEnd()
 	
 	glBegin(GL_POLYGON)
-	glColor3ub(249, 240, 69);
+	glColor3f(1, 1, 0.6);
 	glVertex2f(115, 464)
 	glVertex2f(150, 450)
+	glColor3ub(249, 240, 69);
 	glVertex2f(100, 425)
 	glEnd()
 	
 	glBegin(GL_POLYGON)
-	glColor3ub(249, 240, 69);
+	glColor3f(1, 1, 0.6);
 	glVertex2f(150, 450)
 	glVertex2f(178, 460)
+	glColor3ub(249, 240, 69);
 	glVertex2f(167, 425)
 	glEnd()
 	
 	glBegin(GL_POLYGON)
-	glColor3ub(249, 240, 69);
+	glColor3f(1, 1, 0.6);
 	glVertex2f(200, 500)
 	glVertex2f(178, 460)
+	glColor3ub(249, 240, 69);
 	glVertex2f(225, 475)
 	glEnd()
-	
 	draw_circle(x, y, radius, 1, 1, 0.6)
 
 def draw():                                            # ondraw is called all the time
