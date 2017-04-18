@@ -30,11 +30,11 @@ def refresh2d(width, height):
 
 def draw_mountain():
     glBegin(GL_POLYGON)
-    glColor3ub(0x67, 0x64, 0xa9);
+    glColor3ub(41, 132, 29);
     glVertex2f(453,254);
     glVertex2f(515,391);
     glVertex2f(619,476);
-    glColor3ub(0x3a, 0x38, 0x93);
+    glColor3ub(0x67, 0x64, 0xa9);
     glVertex2f(691,297);
     glVertex2f(792,174);
     glVertex2f(820,125);
@@ -47,13 +47,13 @@ def draw_mountain():
 
     glBegin(GL_POLYGON);
     # //red color
-    glColor3ub(0x67, 0x64, 0xa9);
+    glColor3ub(41, 132, 29);
     glVertex2f(10,10);
-    glVertex2f(75,72);
+    glVertex2f(75,122);
     glVertex2f(145,159);
-    glVertex2f(191,229);
+    glVertex2f(191,259);
     glVertex2f(204,271);
-    glColor3ub(0x24, 0x22, 0x7b);
+    glColor3ub(0x67, 0x64, 0xa9);
     glVertex2f(239,248);
     glVertex2f(280,192);
     glVertex2f(352,134);
@@ -64,7 +64,7 @@ def draw_mountain():
 
 def draw_sky():
     glBegin(GL_POLYGON)
-    glColor3ub(0xff, 0xcc, 0x00);
+    glColor3ub(0,191,255);
     glVertex2f(0,350);
     glVertex2f(0,700);
     glVertex2f(412,700);
@@ -73,7 +73,7 @@ def draw_sky():
     glEnd();
 
     glBegin(GL_POLYGON)
-    glColor3ub(0xff, 0xcc, 0x00);
+    glColor3ub(0,191,255);
     glVertex2f(0,350);
     glVertex2f(0,0);
     glVertex2f(412,0);
@@ -82,7 +82,7 @@ def draw_sky():
     glEnd();
 
     glBegin(GL_POLYGON)
-    glColor3ub(0xff, 0xcc, 0x00);
+    glColor3ub(0,191,255);
     glVertex2f(824,350);
     glVertex2f(824,700);
     glVertex2f(412,700);
@@ -91,7 +91,7 @@ def draw_sky():
     glEnd();
 
     glBegin(GL_POLYGON)
-    glColor3ub(0xff, 0xcc, 0x00);
+    glColor3ub(0,191,255);
     glVertex2f(824,350);
     glVertex2f(824,0);
     glVertex2f(412,0);
@@ -159,7 +159,7 @@ def draw_rainbow_bagus():
         draw_half_circle(x,y,i/2,r,g,b)
 
     glBegin(GL_TRIANGLE_FAN)
-    glColor3ub(0xff, 0xcc, 0x00);
+    glColor3ub(0,191,255);
     radius = 200
     triangleAmount = 100
     glVertex2f(x, y) # center of circle
