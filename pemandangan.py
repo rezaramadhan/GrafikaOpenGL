@@ -59,12 +59,52 @@ def draw_mountain():
 
     glEnd();
 
+def draw_sky():
+    glBegin(GL_POLYGON)
+    glColor3ub(0xff, 0xcc, 0x00);
+    glVertex2f(0,350);
+    glVertex2f(0,700);
+    glVertex2f(412,700);
+    glColor3ub(0xff, 0xff, 0xff);
+    glVertex2f(412,350);
+    glEnd();
+
+    glBegin(GL_POLYGON)
+    glColor3ub(0xff, 0xcc, 0x00);
+    glVertex2f(0,350);
+    glVertex2f(0,0);
+    glVertex2f(412,0);
+    glColor3ub(0xff, 0xff, 0xff);
+    glVertex2f(412,350);
+    glEnd();
+
+    glBegin(GL_POLYGON)
+    glColor3ub(0xff, 0xcc, 0x00);
+    glVertex2f(824,350);
+    glVertex2f(824,700);
+    glVertex2f(412,700);
+    glColor3ub(0xff, 0xff, 0xff);
+    glVertex2f(412,350);
+    glEnd();
+
+    glBegin(GL_POLYGON)
+    glColor3ub(0xff, 0xcc, 0x00);
+    glVertex2f(824,350);
+    glVertex2f(824,0);
+    glVertex2f(412,0);
+    glColor3ub(0xff, 0xff, 0xff);
+    glVertex2f(412,350);
+    glEnd();
+
+    
+
 def draw():                                            # ondraw is called all the time
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT) # clear the screen
     glLoadIdentity()                                   # reset position
     refresh2d(width, height)
 
     # draw polygon
+    draw_sky()
     draw_mountain()
 
     glutSwapBuffers()                                  # important for double buffering
