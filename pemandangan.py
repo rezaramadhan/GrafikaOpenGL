@@ -169,6 +169,82 @@ def draw_rainbow_bagus():
             y + (radius * sin(i * 2.0 * pi / triangleAmount))
         )
     glEnd()
+    
+def draw_circle(x, y, radius, r, g, b):
+	triangleAmount = 100
+	glBegin(GL_TRIANGLE_FAN)
+	glColor3f(r, g, b);
+	glVertex2f(x, y)
+	for i in range(0, triangleAmount+1):
+		glVertex2f(
+            x + (radius * cos(i * 2.0 * pi / triangleAmount)),
+            y + (radius * sin(i * 2.0 * pi / triangleAmount))
+        )
+	glEnd()
+	
+def draw_sun():
+	x = 150
+	y = 500
+	radius = 50
+	triangleAmount = 100
+	
+	glBegin(GL_POLYGON)
+	glColor3ub(249, 240, 69);
+	glVertex2f(150, 550)
+	glVertex2f(175, 542)
+	glVertex2f(163, 575)
+	glEnd()
+	
+	glBegin(GL_POLYGON)
+	glColor3ub(249, 240, 69);
+	glVertex2f(175, 542)
+	glVertex2f(200, 500)
+	glVertex2f(225, 545)
+	glEnd()
+	
+	glBegin(GL_POLYGON)
+	glColor3ub(249, 240, 69);
+	glVertex2f(150, 550)
+	glVertex2f(125, 540)
+	glVertex2f(115, 575)
+	glEnd()
+	
+	glBegin(GL_POLYGON)
+	glColor3ub(249, 240, 69);
+	glVertex2f(125, 542)
+	glVertex2f(100, 500)
+	glVertex2f(75, 545)
+	glEnd()
+	
+	glBegin(GL_POLYGON)
+	glColor3ub(249, 240, 69);
+	glVertex2f(100, 500)
+	glVertex2f(115, 464)
+	glVertex2f(75, 482)
+	glEnd()
+	
+	glBegin(GL_POLYGON)
+	glColor3ub(249, 240, 69);
+	glVertex2f(115, 464)
+	glVertex2f(150, 450)
+	glVertex2f(100, 425)
+	glEnd()
+	
+	glBegin(GL_POLYGON)
+	glColor3ub(249, 240, 69);
+	glVertex2f(150, 450)
+	glVertex2f(178, 460)
+	glVertex2f(167, 425)
+	glEnd()
+	
+	glBegin(GL_POLYGON)
+	glColor3ub(249, 240, 69);
+	glVertex2f(200, 500)
+	glVertex2f(178, 460)
+	glVertex2f(225, 475)
+	glEnd()
+	
+	draw_circle(x, y, radius, 1, 1, 0.6)
 
 def draw():                                            # ondraw is called all the time
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT) # clear the screen
@@ -177,6 +253,7 @@ def draw():                                            # ondraw is called all th
 
     # draw polygon
     draw_sky()
+    draw_sun()
     draw_rainbow_bagus()
     draw_mountain()
 
