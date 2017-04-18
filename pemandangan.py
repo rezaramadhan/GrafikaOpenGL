@@ -96,6 +96,47 @@ def draw_sky():
     glVertex2f(412,350);
     glEnd();
 
+def draw_rainbow():
+
+	glBegin(GL_POLYGON);
+	glColor3ub(0x00, 0xff, 0x00);
+	glVertex2f(600,410);
+	glVertex2f(450,420);
+	glVertex2f(300,410);
+	glColor3ub(0x00, 0x00, 0xff);
+	glVertex2f(300,440);
+	glVertex2f(450,450);
+	glVertex2f(600,440);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glColor3ub(0xff, 0xff, 0x00);
+	glVertex2f(600,380);
+	glVertex2f(450,390);
+	glVertex2f(300,380);
+	glColor3ub(0x00, 0xff, 0x00);
+	glVertex2f(300,410);
+	glVertex2f(450,420);
+	glVertex2f(600,410);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glColor3ub(0xff, 0x00, 0x00);
+	glVertex2f(600,350);
+	glVertex2f(450,360);
+	glVertex2f(300,350);
+	glColor3ub(0xff, 0xff, 0x00);
+	glVertex2f(300,380);
+	glVertex2f(450,390);
+	glVertex2f(600,380);
+	glEnd();
+
+   
+
+    
+
+
+
     
 
 def draw():                                            # ondraw is called all the time
@@ -105,6 +146,7 @@ def draw():                                            # ondraw is called all th
 
     # draw polygon
     draw_sky()
+    draw_rainbow()
     draw_mountain()
 
     glutSwapBuffers()                                  # important for double buffering
