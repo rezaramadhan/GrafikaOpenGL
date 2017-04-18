@@ -98,36 +98,82 @@ def draw_sky():
 
 def draw_rainbow():
 
+	# glBegin(GL_POLYGON);
+	# glColor3ub(0x00, 0xff, 0x00);
+	# glVertex2f(600,410);
+	# glVertex2f(450,420);
+	# glVertex2f(0,410);
+	# glColor3ub(0x00, 0x00, 0xff);
+	# glVertex2f(0,440);
+	# glVertex2f(450,450);
+	# glVertex2f(600,440);
+	# glEnd();
+
+	# glBegin(GL_POLYGON);
+	# glColor3ub(0xff, 0xff, 0x00);
+	# glVertex2f(600,380);
+	# glVertex2f(450,390);
+	# glVertex2f(0,380);
+	# glColor3ub(0x00, 0xff, 0x00);
+	# glVertex2f(0,410);
+	# glVertex2f(450,420);
+	# glVertex2f(600,410);
+	# glEnd();
+
 	glBegin(GL_POLYGON);
 	glColor3ub(0x00, 0xff, 0x00);
 	glVertex2f(600,410);
-	glVertex2f(450,420);
-	glVertex2f(300,410);
-	glColor3ub(0x00, 0x00, 0xff);
+	glVertex2f(500,420);
+	glVertex2f(400,430);
 	glVertex2f(300,440);
-	glVertex2f(450,450);
+	glVertex2f(200,430);
+	glVertex2f(100,420);
+	glVertex2f(0,410);
+	glColor3ub(0x00, 0x00, 0xff);
+	glVertex2f(0,440);
+	glVertex2f(100,450);
+	glVertex2f(200,460);
+	glVertex2f(300,470);
+	glVertex2f(400,460);
+	glVertex2f(500,450);
 	glVertex2f(600,440);
 	glEnd();
 
 	glBegin(GL_POLYGON);
 	glColor3ub(0xff, 0xff, 0x00);
 	glVertex2f(600,380);
-	glVertex2f(450,390);
-	glVertex2f(300,380);
-	glColor3ub(0x00, 0xff, 0x00);
+	glVertex2f(500,390);
+	glVertex2f(400,400);
 	glVertex2f(300,410);
-	glVertex2f(450,420);
+	glVertex2f(200,400);
+	glVertex2f(100,390);
+	glVertex2f(0,380);
+	glColor3ub(0x00, 0xff, 0x00);
+	glVertex2f(0,410);
+	glVertex2f(100,420);
+	glVertex2f(200,430);
+	glVertex2f(300,440);
+	glVertex2f(400,430);
+	glVertex2f(500,420);
 	glVertex2f(600,410);
 	glEnd();
 
 	glBegin(GL_POLYGON);
 	glColor3ub(0xff, 0x00, 0x00);
 	glVertex2f(600,350);
-	glVertex2f(450,360);
-	glVertex2f(300,350);
-	glColor3ub(0xff, 0xff, 0x00);
+	glVertex2f(500,360);
+	glVertex2f(400,370);
 	glVertex2f(300,380);
-	glVertex2f(450,390);
+	glVertex2f(200,370);
+	glVertex2f(100,360);
+	glVertex2f(0,350);
+	glColor3ub(0xff, 0xff, 0x00);
+	glVertex2f(0,380);
+	glVertex2f(100,390);
+	glVertex2f(200,400);
+	glVertex2f(300,410);
+	glVertex2f(400,400);
+	glVertex2f(500,390);
 	glVertex2f(600,380);
 	glEnd();
 
