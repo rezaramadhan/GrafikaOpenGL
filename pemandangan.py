@@ -60,6 +60,174 @@ def draw_mountain():
     glVertex2f(493,10);
     glEnd()
 
+def draw_hill():
+    # The hill
+    glBegin(GL_POLYGON)
+    glColor3ub(56, 155, 90);
+    glVertex2f(0,100);
+    glVertex2f(50,105);
+    glVertex2f(100,105);
+    glColor3ub(80, 159, 72);
+    glVertex2f(150,100);
+    glVertex2f(200,90);
+    glVertex2f(250,80);
+    glVertex2f(300,60);
+    glVertex2f(350,40);
+    glVertex2f(400,20);
+    glVertex2f(450,0);
+    glVertex2f(500,0);
+    glVertex2f(0,0);
+    glEnd()
+
+    #Trees in the hill 1
+    glBegin(GL_POLYGON)
+    glColor3ub(139, 92, 53);
+    glVertex2f(30,90);
+    glVertex2f(50,90);
+    glVertex2f(50,120);
+    glVertex2f(30,120);
+    glEnd()
+    glBegin(GL_POLYGON)
+    glColor3ub(80, 159, 72);
+    glVertex2f(40,260);
+    glColor3ub(56, 155, 90);
+    glVertex2f(0,120);
+    glVertex2f(80,120);
+    glEnd()
+
+
+    #Trees in the hill 1
+    glBegin(GL_POLYGON)
+    glColor3ub(139, 92, 53);
+    glVertex2f(100,100)
+    glVertex2f(120,100)
+    glVertex2f(120,130)
+    glVertex2f(100,130)
+    glEnd()
+    glBegin(GL_POLYGON)
+    glColor3ub(80, 159, 72);
+    glVertex2f(110,250)
+    glColor3ub(56, 155, 90);
+    glVertex2f(70,130)
+    glVertex2f(150,130)
+    glEnd()
+
+     #Trees in the hill 2
+    glBegin(GL_POLYGON)
+    glColor3ub(139, 92, 53);
+    glVertex2f(190,85)
+    glVertex2f(210,85)
+    glVertex2f(210,130)
+    glVertex2f(190,130)
+    glEnd()
+    glBegin(GL_POLYGON)
+    glColor3ub(80, 159, 72);
+    glVertex2f(200,260)
+    glColor3ub(56, 155, 90);
+    glVertex2f(155,130)
+    glVertex2f(245,130)
+    glEnd()
+
+    #Trees in the hill 2
+    glBegin(GL_POLYGON)
+    glColor3ub(139, 92, 53);
+    glVertex2f(150,80)
+    glVertex2f(170,80)
+    glVertex2f(170,120)
+    glVertex2f(150,120)
+    glEnd()
+    glBegin(GL_POLYGON)
+    glColor3ub(80, 159, 72);
+    glVertex2f(160,240)
+    glColor3ub(70, 159, 62);
+    glVertex2f(120,120)
+    glVertex2f(200,120)
+    glEnd()
+
+    #Trees in the hill 2
+    glBegin(GL_POLYGON)
+    glColor3ub(139, 92, 53);
+    glVertex2f(300,40)
+    glVertex2f(320,40)
+    glVertex2f(320,80)
+    glVertex2f(300,80)
+    glEnd()
+    glBegin(GL_POLYGON)
+    glColor3ub(80, 159, 72);
+    glVertex2f(310,180)
+    glColor3ub(56, 155, 90);
+    glVertex2f(270,80)
+    glVertex2f(350,80)
+    glEnd()
+
+     #Trees in the hill 2
+    glBegin(GL_POLYGON)
+    glColor3ub(139, 92, 53);
+    glVertex2f(350,20)
+    glVertex2f(370,20)
+    glVertex2f(370,60)
+    glVertex2f(350,60)
+    glEnd()
+    glBegin(GL_POLYGON)
+    glColor3ub(80, 159, 72);
+    glVertex2f(360,170)
+    glColor3ub(70, 159, 62);
+    glVertex2f(320,60)
+    glVertex2f(400,60)
+    glEnd()
+
+
+   
+
+def draw_trees():
+	
+    glBegin(GL_POLYGON)
+    glEnd()
+
+
+    glBegin(GL_POLYGON)
+    glColor3ub(80, 159, 72);
+    glVertex2f(715,300);
+
+    glColor3ub(30, 139, 72);
+    glVertex2f(615,0);
+    glVertex2f(815,0);
+    glEnd()
+
+    glBegin(GL_POLYGON)
+    glColor3ub(80, 159, 72);
+    glVertex2f(615,250);
+    glColor3ub(56, 155, 90);
+    glVertex2f(515,0);
+    glVertex2f(715,0);
+    glEnd()
+
+    glBegin(GL_POLYGON)
+    glColor3ub(80, 159, 72);
+    glVertex2f(770,200);
+    glVertex2f(714,0);
+    glVertex2f(824,0);
+    glEnd()
+    # glVertex2f(640,120);
+    # glVertex2f(680,220);
+    # glVertex2f(660,200);
+
+    # glVertex2f(715,300);  
+    # glVertex2f(770,200);
+    # glVertex2f(740,220);
+    # glVertex2f(790,120);
+    # glVertex2f(760,140);
+    # glVertex2f(800,40);
+    # glVertex2f(770,60);
+    # glVertex2f(820,0);
+    # glVertex2f(610,0);
+    # glColor3ub(0x67, 0x64, 0xa9);
+    
+
+
+    
+
+
 
 
 def draw_sky():
@@ -169,6 +337,89 @@ def draw_rainbow_bagus():
             y + (radius * sin(i * 2.0 * pi / triangleAmount))
         )
     glEnd()
+    
+def draw_circle(x, y, radius, r, g, b):
+	triangleAmount = 100
+	glBegin(GL_TRIANGLE_FAN)
+	glColor3f(r, g, b);
+	glVertex2f(x, y)
+	for i in range(0, triangleAmount+1):
+		glVertex2f(
+            x + (radius * cos(i * 2.0 * pi / triangleAmount)),
+            y + (radius * sin(i * 2.0 * pi / triangleAmount))
+        )
+	glEnd()
+	
+def draw_sun():
+	x = 150
+	y = 500
+	radius = 50
+	triangleAmount = 100
+	
+	glBegin(GL_POLYGON)
+	glColor3f(1, 1, 0.6);
+	glVertex2f(150, 550)
+	glVertex2f(175, 542)
+	glColor3ub(249, 240, 69);
+	glVertex2f(163, 575)
+	glEnd()
+	
+	glBegin(GL_POLYGON)
+	glColor3f(1, 1, 0.6);
+	glVertex2f(175, 542)
+	glVertex2f(200, 500)
+	glColor3ub(249, 240, 69);
+	glVertex2f(225, 545)
+	glEnd()
+	
+	glBegin(GL_POLYGON)
+	glColor3f(1, 1, 0.6);
+	glVertex2f(150, 550)
+	glVertex2f(125, 540)
+	glColor3ub(249, 240, 69);
+	glVertex2f(115, 575)
+	glEnd()
+	
+	glBegin(GL_POLYGON)
+	glColor3f(1, 1, 0.6);
+	glVertex2f(125, 542)
+	glVertex2f(100, 500)
+	glColor3ub(249, 240, 69);
+	glVertex2f(75, 545)
+	glEnd()
+	
+	glBegin(GL_POLYGON)
+	glColor3f(1, 1, 0.6);
+	glVertex2f(100, 500)
+	glVertex2f(115, 464)
+	glColor3ub(249, 240, 69);
+	glVertex2f(75, 482)
+	glEnd()
+	
+	glBegin(GL_POLYGON)
+	glColor3f(1, 1, 0.6);
+	glVertex2f(115, 464)
+	glVertex2f(150, 450)
+	glColor3ub(249, 240, 69);
+	glVertex2f(100, 425)
+	glEnd()
+	
+	glBegin(GL_POLYGON)
+	glColor3f(1, 1, 0.6);
+	glVertex2f(150, 450)
+	glVertex2f(178, 460)
+	glColor3ub(249, 240, 69);
+	glVertex2f(167, 425)
+	glEnd()
+	
+	glBegin(GL_POLYGON)
+	glColor3f(1, 1, 0.6);
+	glVertex2f(200, 500)
+	glVertex2f(178, 460)
+	glColor3ub(249, 240, 69);
+	glVertex2f(225, 475)
+	glEnd()
+	draw_circle(x, y, radius, 1, 1, 0.6)
 
 def draw():                                            # ondraw is called all the time
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT) # clear the screen
@@ -177,8 +428,11 @@ def draw():                                            # ondraw is called all th
 
     # draw polygon
     draw_sky()
+    draw_sun()
     draw_rainbow_bagus()
     draw_mountain()
+    draw_hill()
+    draw_trees()
 
     glutSwapBuffers()                                  # important for double buffering
 
